@@ -19,6 +19,11 @@ for (let i = 0; i < dotList.length; i++) {
 
 slideShow(currIndex)
 
+// automatic slideshow in 5s
+setInterval(() => {
+    slideShow(currIndex + 1)
+}, 5000);
+
 
 function slideShow(index) {
     let slideList = document.querySelectorAll('.slide-item')
