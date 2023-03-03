@@ -10,18 +10,36 @@ html {
 }
 
 .slide-list {
-    max-width: 1000px;
+    width: 1000px;
+    height: 500px;
+    
+    object-fit: cover;
     margin: 0 auto;
     position: relative;
     z-index: 0;
+    overflow: hidden;
 }
 
 .slide-item {
+    width: 100%;
+    height: 100%;
+    
     display: none;
+    animation: slideEffect 0.4s linear;
+}
+
+@keyframes slideEffect {
+    from {
+        opacity: 0.4;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 .slide-item img{
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .slide-item.active {
